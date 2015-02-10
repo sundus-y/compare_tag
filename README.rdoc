@@ -5,8 +5,11 @@ Comparing different ways to render html elements in rails
 == My Findings
 Trying to render 10_000 div
 * pure_html:  Rendered compare_tag/_pure_html.html.erb (5.3ms)
- 0.000000  0.000000  0.000000 (  0.006791)
+ user       system      total       real
+ 0.000000   0.000000    0.000000 (  0.006791)
 * pure_haml_html:  Rendered compare_tag/_pure_haml_html.html.haml (29.6ms)
- 0.030000  0.000000  0.030000 (  0.030880)
+ user       system      total       real
+ 0.030000   0.000000    0.030000 (  0.030880)
 * content_tag:  Rendered compare_tag/_content_tag.html.erb (374.2ms)
- 0.370000  0.010000  0.380000 (  0.375671)
+ user       system      total       real
+ 0.370000   0.010000    0.380000 (  0.375671)
