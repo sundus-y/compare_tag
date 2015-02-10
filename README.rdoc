@@ -1,28 +1,12 @@
-== README
+== ERB vs HAML vs PURE HTML
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Comparing different ways to render html elements in rails
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== My Findings
+Trying to render 10_000 div
+* pure_html:  Rendered compare_tag/_pure_html.html.erb (5.3ms)
+ 0.000000  0.000000  0.000000 (  0.006791)
+* pure_haml_html:  Rendered compare_tag/_pure_haml_html.html.haml (29.6ms)
+ 0.030000  0.000000  0.030000 (  0.030880)
+* content_tag:  Rendered compare_tag/_content_tag.html.erb (374.2ms)
+ 0.370000  0.010000  0.380000 (  0.375671)
