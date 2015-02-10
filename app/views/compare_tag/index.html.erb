@@ -1,0 +1,12 @@
+<% count = 10_000 %>
+<% result = Benchmark.bm(7) do |x| %>
+  <% x.report("pure_html:") do %>
+    <%= render 'pure_html', count: count %>
+  <% end %>
+  <% x.report("pure_haml_html:") do %>
+    <%= render 'pure_haml_html', count: count %>
+  <% end %>
+  <% x.report("content_tag:") do %>
+    <%= render 'content_tag', count: count %>
+  <% end %>
+<% end %>
